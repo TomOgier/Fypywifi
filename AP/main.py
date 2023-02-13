@@ -49,6 +49,7 @@ def monitor(pack):
 
 pycom.heartbeat(False)
 wlan = WLAN()
+wlan.init(mode=WLAN.AP, ssid='Facto')
 wlan.antenna(WLAN.EXT_ANT)
 print("Je suis l'AP")
 
@@ -58,7 +59,4 @@ print(ubinascii.hexlify(machine.unique_id(),':').decode())
 
 wlan.callback(trigger=WLAN.EVENT_PKT_DATA, handler=monitor)
 wlan.promiscuous(True)
-
-wlan.send_raw(Buffer=ackNoData)
-print("c'est envoye")
 
