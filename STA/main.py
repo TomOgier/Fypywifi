@@ -1,7 +1,8 @@
 from network import WLAN
 import machine
+from machine import Timer
 import ubinascii
-
+import time
 
 
 #initialistaion en mode station 
@@ -13,6 +14,7 @@ print('mon adresse MAC est :')
 print(ubinascii.hexlify(machine.unique_id(),':').decode())
 
 #connection à l'AP avec le ssid Facto
+
 nets = wlan.scan()
 for net in nets:
     if net.ssid == 'Facto':
@@ -26,7 +28,20 @@ for net in nets:
 
 #  ------------------------------------
 
-listenIntervalle = 1000
+#trame pspoll (erreur la fipy (AP) change le dernier bit de son adresse MAC)
+pspoll =  b'\x08\x00\x00\x00\xfc\xf5\xc4\x0d\xef\x65\xf0\x08\xd1\xcb\x59\x68\xfc\xf5\xc4\x0d\xef\x65\x00\x00\x02'
+
+#trame ACK permetant d'acquiter les data
+ackData = b'''\x08\x00\x00\x00
+              \xfc\xf5\xc4\x0d\xef\x65
+              \xf0\x08\xd1\xcb\x59\x68
+              \xfc\xf5\xc4\x0d\xef\x65
+              \x00\x00
+              \x01'''
+
+
+listenIntervalle = 10
+waitForPaket = False
 
 #permet de définir si une trame nous apprtient avec l'adresse mac source
 def accept_pack(pack):
@@ -44,11 +59,16 @@ def accept_pspoll(pack):
 def accept_data(pack):
     return len(pack.data) - 28 >= 1 and pack.data[24] == 0x03
 
-#trame pspoll
-pspoll = b'\x08\x00\x00\x00\xfc\xf5\xc4\x0d\xef\x64\xf0\x08\xd1\xcb\x59\x68\xfc\xf5\xc4\x0d\xef\x64\x00\x00\x02'
+def more_data(pack):
+    return pack.data[1] == 0x30
 
-#trame ACK permetant d'acquiter les data
-ackData = b'\x08\x00\x00\x00\xfc\xf5\xc4\x0d\xef\x64\xf0\x08\xd1\xcb\x59\x68\xfc\xf5\xc4\x0d\xef\x64\x00\x00\x01'
+
+def ifNoReturn(alarm):
+    if waitForPaket:
+        wlan.send_raw(Buffer=pspoll)
+    else:
+        alarm.cancel()
+
 
 
 
@@ -63,17 +83,26 @@ def monitor(pack):
         if accept_ack(pk):
             # si Ack recu, plus de data a recevoir donc la STA s'endort
             print("j'ai recu un ack")
-            #machine.sleep(listenIntervalle,True)
+            waitForPaket = False
+            machine.idle()
             # A la fin du doze state envoie un pspoll et reste en attente d'une reponse 
+            print("je me reveille")
             wlan.send_raw(Buffer=pspoll)
+            waitForPaket = True
+            #Timer.Alarm(ifNoReturn, 1, periodic=True)
+
         if accept_data(pk):
             # si data recu, plus de data a recevoir donc la STA s'endort apres avoir envoyé un ack
             print("j'ai recu une data")
             wlan.send_raw(Buffer=ackData)
-            #machine.sleep(listenIntervalle)
-            print(("je suis reveill"))
+            waitForPaket = False
+            if not more_data(pk):
+                machine.idle()
+                print(("je suis reveill"))
             # A la fin du doze state envoie un pspoll et reste en attente d'une reponse 
             wlan.send_raw(Buffer=pspoll)
+            waitForPaket = True
+            #Timer.Alarm(ifNoReturn, 1, periodic=True)
 
 
 
@@ -83,8 +112,21 @@ wlan.callback(trigger=WLAN.EVENT_PKT_DATA, handler=monitor)
 #wlan.callback(trigger=WLAN.EVENT_PKT_ANY,handler=test)
 wlan.promiscuous(True)
 
+ 
+
+#time.sleep(2)
+
 
 wlan.send_raw(Buffer=pspoll)
+print("j'ai envoye un pspoll")
+waitForPaket = True
+while waitForPaket:
+    time.sleep(1)
+    wlan.send_raw(Buffer=pspoll)
+    print(waitForPaket)
+#Timer.Alarm(ifNoReturn, 1, periodic=True)
+
+
 
 
 
