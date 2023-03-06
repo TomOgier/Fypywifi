@@ -23,6 +23,6 @@ J'essaye en ce moment d'implémenter le mechanisme de downstream avec des pspoll
   `print("je me reveille")`
  Il va d'abord m'affiché je me reveille, puis s'endormir pendant une seconde 
 
- - Lorsque je regade les trames que j'envoie sur le medium radio, elle s'affiches en malformed data sur Wireshark ( je suis en discussion avec Johannes pour comprendre ce problème)
+ - Lorsque je regade les trames que j'envoie sur le medium radio, elle s'affiches en malformed data sur Wireshark ( je suis en discussion avec Johann pour comprendre ce problème). J'ai récuperer des données de Wireshark afin de visualiser l'erreur Malformed packet
 
  
