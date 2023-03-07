@@ -13,7 +13,7 @@ J'essaye en ce moment d'implémenter le mechanisme de downstream avec des pspoll
 
  - Lorsque la fonction `send_raw()` envoie des trames et ne se met pas en erreur système, la trame est sytématiquement envoyé sur le medium radio sur le cannal 1 en 2,4GHz sur la bande des 20MHz. Lorsque la trame est bien forgé (c'est dire qu'il y a la bonne adresse MAC destination) la carte wifi destination recoit bien la trame et envoie un ACK. (preuve à l'appuis à l'aide de WIRESHARK en mode monitor). Même si les trames sont toujours recues coté Hardware (puisqu'il y a ACK), elles ne sont pas toujours réçu par le code qui s'éxécutent sur la Fipy de destination.
 
- - Le seul moyen de récupérer les trames envoyées est de mettre la machine en mode promiscueus, elle va écouter sur le medium radio et récuperer seulement les trames qui ont comme adresse MAC destination celle de la Fipy (Fait auniveau du code). Malheureusment c'est fait dans des fonctions de callback et cela met en erreur la fonction `machine.sleep(1)` qui permet à la Fipy de s'endormir (Doze state) pendant une miliseconde (erreur non systematique).
+ - Le seul moyen de récupérer les trames envoyées est de mettre la machine en mode promiscueus, elle va écouter sur le medium radio et récuperer seulement les trames qui ont comme adresse MAC destination celle de la Fipy (Fait au niveau du code). Malheureusment c'est fait dans des fonctions de callback et cela met en erreur la fonction `machine.sleep(1)` qui permet à la Fipy de s'endormir (Doze state) pendant une miliseconde (erreur non systematique).
 
  - Ce qui rend le debogguage compliqué est la manière aléatoire des erreurs. 
  
@@ -24,5 +24,11 @@ J'essaye en ce moment d'implémenter le mechanisme de downstream avec des pspoll
  Il va d'abord m'affiché je me reveille, puis s'endormir pendant une seconde 
 
  - Lorsque je regade les trames que j'envoie sur le medium radio, elle s'affiches en malformed data sur Wireshark ( je suis en discussion avec Johann pour comprendre ce problème). J'ai récuperer des données de Wireshark afin de visualiser l'erreur Malformed packet
+
+- changement adresse mAC (explicité)
+- regarder comter le nombre de fois que cela plante (surcharge du systeme)
+- verifier si on recoirt des trames du reseau exterieur (promiscueus mode)
+- etudier pour le socket poyr alterative 
+- force la sequenciatlité 
 
  
