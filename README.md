@@ -25,9 +25,6 @@ J'essaye en ce moment d'implémenter le mechanisme de downstream avec des pspoll
 
  - Lorsque je regade les trames que j'envoie sur le medium radio, elle s'affiches en malformed data sur Wireshark ( je suis en discussion avec Johann pour comprendre ce problème). J'ai récuperer des données de Wireshark afin de visualiser l'erreur Malformed packet
 
-## Explication Code 
-
-Tout l'algorithme qui s'éxécute sur les Fipy tourne autour de la fonction `send_raw()` qui permet d'envoyer sur le medium radio des trames de data non QoS et des trames de management. Cette fonction prend en parametre une trame forger à la main 
 
 
 - changement adresse mAC 
@@ -54,3 +51,6 @@ Tout l'algorithme qui s'éxécute sur les Fipy tourne autour de la fonction `sen
 - force la sequenciatlité 
 
  
+## Explication Code 
+
+Tout l'algorithme qui s'éxécute sur les Fipy tourne autour de la fonction `send_raw()` qui permet d'envoyer sur le medium radio des trames de data non QoS et des trames de management. Cette fonction prend en parametre une trame forger à la main 
