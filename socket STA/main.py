@@ -3,6 +3,7 @@ import machine
 from machine import Timer
 import ubinascii
 import socket
+import usocket
 import _thread
 import time
 import uerrno
@@ -33,14 +34,21 @@ wlan.ifconfig(config=('192.168.4.4', '255.255.255.0', '192.168.4.254', '8.8.8.8'
 #  ------------------------------------
 
 
+# Set up server socket
+serversocket = usocket.socket(usocket.AF_INET, usocket.SOCK_DGRAM)
+serversocket.setsockopt(usocket.SOL_SOCKET, usocket.SO_REUSEADDR, 1)
+serversocket.bind(("",6543))
+
+
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+s.sendto(b'pspoll',("192.168.4.1", 6543))
+s.close()
 
-addr = socket.getaddrinfo("192.168.4.1", 6543)[0][-1]
-print(addr)
-print('socket connected')
-# it is possible to attach additional HTTP headers in the line below, but note to always close with \r\n\r\n
-n="H"
-s.sendto(n,("192.168.4.1", 6543))
-time.sleep(1)
-
-print('end')
+while True:
+    # Accept the connection of the clients
+    print("attente")
+    (c, address) = serversocket.recvfrom(1024)
+    # Start a new thread to handle the client
+    print(c)
+    #_thread.start_new_thread(client_thread, c)
+    #c = c+1

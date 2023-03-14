@@ -4,6 +4,7 @@ import pycom
 import time
 import machine
 import usocket
+import socket
 import _thread
 
 
@@ -23,23 +24,13 @@ print(wlan.ifconfig())
 #  ------------------------------------
 
 # Thread for handling a client
-def client_thread(clientsocket,n):
+def client_thread(n):
     # Receive maxium of 12 bytes from the client
-    r = clientsocket.recv(12)
+    if (n == "pspoll"):
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        s.sendto(b'ack',("192.168.4.1", 6543))
+        s.close()
 
-    # If recv() returns with 0 the other end closed the connection
-    if len(r) == 0:
-        clientsocket.close()
-        return
-    else:
-        # Do something wth the received data...
-        print("Received: {}".format(str(r)))
-
-    # Sends back some data
-    clientsocket.send(str(n))
-
-    # Close the socket and terminate the thread
-    clientsocket.close()
 
 
 
@@ -57,9 +48,8 @@ serversocket.bind(("",6543))
 while True:
     # Accept the connection of the clients
     print("attente")
-    (byt, address) = serversocket.recvfrom(1024)
+    (c, address) = serversocket.recvfrom(1024)
     # Start a new thread to handle the client
-    print(byt)
-    #_thread.start_new_thread(client_thread, (clientsocket, c))
+    _thread.start_new_thread(client_thread, c)
     #c = c+1
 
