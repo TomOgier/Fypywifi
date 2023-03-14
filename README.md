@@ -31,10 +31,12 @@ J'essaye en ce moment d'implémenter le mechanisme de downstream avec des pspoll
 - regarder comter le nombre de fois que cela plante (surcharge du systeme)
     Cela n'a pas l'air de venir d'une surcharge du systeme car il faut une erreur `OSError: the requested is not possible` qui arrive de facon chaotique mais ce repete si le code n'est pas modifier.
     Par exemple avec le code suivant 
-    `for i in range(10): `
-        `machine.sleep(1000)`
-        `wlan.send_raw(Buffer=Pspoll)`
-        `print(i)`
+    ```python
+    for i in range(10): 
+        machine.sleep(1000)
+        wlan.send_raw(Buffer=Pspoll)
+        print(i)
+    ```
     Il va se mettre en erreur à la troisieme fois, qu'importe le nombre de fois ou je relance le code 
     Mais si je change la quatrième ligne en `print("j'ai envoyé " + str(i) + " fois")`, les dix vont fonctionner 
 
@@ -43,7 +45,7 @@ J'essaye en ce moment d'implémenter le mechanisme de downstream avec des pspoll
 
 
 - etudier pour le socket poyr alterative 
-    
+
 - force la sequenciatlité 
 
  
