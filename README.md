@@ -25,10 +25,25 @@ J'essaye en ce moment d'implémenter le mechanisme de downstream avec des pspoll
 
  - Lorsque je regade les trames que j'envoie sur le medium radio, elle s'affiches en malformed data sur Wireshark ( je suis en discussion avec Johann pour comprendre ce problème). J'ai récuperer des données de Wireshark afin de visualiser l'erreur Malformed packet
 
-- changement adresse mAC (explicité)
+- changement adresse mAC 
+    Il faut utiliser, en python, l'éxécution `machine.unique_id()`pour récuperer l'adresse mac de la machine. Cela nous permet de construire la trame en mettant dans les bons champs les bonnes adresses mac pour éviter la retransmission. Sauf que le Hardware de la machine change l'adresse mac de un bit (@MAC + 1) (visualiser garce a Wireshark en mode monitor), Il faut donc prendre cela en compte lorsque l'on forge les trames.
+
 - regarder comter le nombre de fois que cela plante (surcharge du systeme)
+    Cela n'a pas l'air de venir d'une surcharge du systeme car il faut une erreur `OSError: the requested is not possible` qui arrive de facon chaotique mais ce repete si le code n'est pas modifier.
+    Par exemple avec le code suivant 
+    `for i in range(10): `
+        `machine.sleep(1000)`
+        `wlan.send_raw(Buffer=Pspoll)`
+        `print(i)`
+    Il va se mettre en erreur à la troisieme fois, qu'importe le nombre de fois ou je relance le code 
+    Mais si je change la quatrième ligne en `print("j'ai envoyé " + str(i) + " fois")`, les dix vont fonctionner 
+
 - verifier si on recoirt des trames du reseau exterieur (promiscueus mode)
+    Oui le mode promiscueus permet de voire les trames du réseau extérieur, c'est donc plutot un mode monitor
+
+
 - etudier pour le socket poyr alterative 
+    
 - force la sequenciatlité 
 
  
