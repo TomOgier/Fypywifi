@@ -29,15 +29,11 @@ for net in nets:
 #  ------------------------------------
 
 #trame pspoll (erreur la fipy (AP) change le dernier bit de son adresse MAC)
-pspoll =  b'\x08\x00\x00\x00\xfc\xf5\xc4\x0d\xef\x65\xf0\x08\xd1\xcb\x59\x68\xfc\xf5\xc4\x0d\xef\x65\x00\x00\x02'
+pspoll =  b'\x08\x00\x00\x00\xfc\xf5\xc4\x0d\xef\x65\xf0\x08\xd1\xcb\x59\x68\xfc\xf5\xc4\x0d\xef\x65\x00\x00\x01'
 
 #trame ACK permetant d'acquiter les data
-ackData = b'''\x08\x00\x00\x00
-              \xfc\xf5\xc4\x0d\xef\x65
-              \xf0\x08\xd1\xcb\x59\x68
-              \xfc\xf5\xc4\x0d\xef\x65
-              \x00\x00
-              \x01'''
+ackData = b'\x08\x00\x00\x00\xfc\xf5\xc4\x0d\xef\x65\xf0\x08\xd1\xcb\x59\x68\xfc\xf5\xc4\x0d\xef\x65\x00\x00\x01\01\02'
+
 
 
 listenIntervalle = 10
@@ -70,7 +66,7 @@ def ifNoReturn(alarm):
         alarm.cancel()
 
 
-
+'''
 
 #fonction appelé lorsque la STA recoit un paquet
 #L'ensemble de l'algorithme distribué se trouve dans cette fonction
@@ -124,9 +120,24 @@ while waitForPaket:
     time.sleep(1)
     wlan.send_raw(Buffer=pspoll)
     print(waitForPaket)
+
+
+
+wlan.send_raw(Buffer=ackData)
+for i in range (10):
+    machine.sleep(1000)
+    #
+    #wlan.send_raw(Buffer=ackData)
+    
+    print("j'ai envoyé " + str(i))
+'''
 #Timer.Alarm(ifNoReturn, 1, periodic=True)
 
 
+def test(pack):
+    print(wlan.wifi_packet())
 
 
+#wlan.callback(trigger=WLAN.EVENT_PKT_DATA,handler=test)
+wlan.promiscuous(True)
 
