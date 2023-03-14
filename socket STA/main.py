@@ -29,20 +29,18 @@ for net in nets:
         print('WLAN connection succeeded!')
         break
 
-
+wlan.ifconfig(config=('192.168.4.4', '255.255.255.0', '192.168.4.254', '8.8.8.8'))
 #  ------------------------------------
 
 
-s = socket.socket()
-host = ''
-addr = socket.getaddrinfo("192.168.4.254", 6543)[0][-1]
-s.connect(addr)
+s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
+addr = socket.getaddrinfo("192.168.4.1", 6543)[0][-1]
+print(addr)
 print('socket connected')
 # it is possible to attach additional HTTP headers in the line below, but note to always close with \r\n\r\n
-httpreq = 'GET / HTTP/1.1 \r\nHOST: '+ host + '\r\nConnection: close \r\n\r\n'
-print('http request: \n', httpreq)
-s.send(httpreq)
+n="H"
+s.sendto(n,("192.168.4.1", 6543))
 time.sleep(1)
-rec_bytes = s.recv(10000)
-print(rec_bytes)
+
 print('end')

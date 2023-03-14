@@ -17,9 +17,9 @@ print("Je suis l'AP")
 print('mon adresse MAC est :')
 print(ubinascii.hexlify(machine.unique_id(),':').decode())
 
-wlan.ifconfig(config=('192.168.4.254', '255.255.255.0', '192.168.4.254', '8.8.8.8'))
+print(wlan.ifconfig(config=('192.168.4.1', '255.255.255.0', '192.168.4.254', '8.8.8.8')))
 
-
+print(wlan.ifconfig())
 #  ------------------------------------
 
 # Thread for handling a client
@@ -44,18 +44,22 @@ def client_thread(clientsocket,n):
 
 
 # Set up server socket
-serversocket = usocket.socket(usocket.AF_INET, usocket.SOCK_STREAM, usocket.IPPROTO_UDP)
+serversocket = usocket.socket(usocket.AF_INET, usocket.SOCK_DGRAM)
 serversocket.setsockopt(usocket.SOL_SOCKET, usocket.SO_REUSEADDR, 1)
-serversocket.bind(("192.168.4.254", 6543))
+serversocket.bind(("",6543))
+
 
 # Accept maximum of 5 connections at the same time
-serversocket.listen(5)
+#serversocket.listen()
 
 # Unique data to send back
-c = 0
+#c = 0
 while True:
     # Accept the connection of the clients
-    (clientsocket, address) = serversocket.accept()
+    print("attente")
+    (byt, address) = serversocket.recvfrom(1024)
     # Start a new thread to handle the client
-    _thread.start_new_thread(client_thread, (clientsocket, c))
-    c = c+1
+    print(byt)
+    #_thread.start_new_thread(client_thread, (clientsocket, c))
+    #c = c+1
+
