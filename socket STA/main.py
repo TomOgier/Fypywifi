@@ -33,16 +33,20 @@ for net in nets:
 wlan.ifconfig(config=('192.168.4.4', '255.255.255.0', '192.168.4.254', '8.8.8.8'))
 #  ------------------------------------
 
-def client_thread(c,address):
+serversocket = usocket.socket(usocket.AF_INET, usocket.SOCK_DGRAM)
+serversocket.setsockopt(usocket.SOL_SOCKET, usocket.SO_REUSEADDR, 1)
+serversocket.bind(("",6543))
+
+
+
+def client_thread(socket1, c,address):
     # Receive maxium of 12 bytes from the client
     print(c)
     if (c == b'ack'):
         print("debut attente")
         machine.sleep(10000)
         print("fin attente")
-        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        s.sendto(b'pspoll',("192.168.4.1", 6543))
-        s.close()
+        socket1.sendto(b'pspoll',("192.168.4.1", 6543))
 
 
 
@@ -50,20 +54,14 @@ def client_thread(c,address):
 
 
 
-s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-s.sendto(b'pspoll',("192.168.4.1", 6543))
-s.close()
+serversocket.sendto(b'pspoll',("192.168.4.1", 6543))
 
 while True:
     # Accept the connection of the clients
-    serversocket = usocket.socket(usocket.AF_INET, usocket.SOCK_DGRAM)
-    serversocket.setsockopt(usocket.SOL_SOCKET, usocket.SO_REUSEADDR, 1)
-    serversocket.bind(("",6543))
+    
     print("attente")
-    serversocket.getsockname()
     (c, address) = serversocket.recvfrom(1024)
     # Start a new thread to handle the client
-    serversocket.close()
-    _thread.start_new_thread(client_thread, (c,address))
+    _thread.start_new_thread(client_thread, (serversocket, c,address))
     #_thread.start_new_thread(client_thread, c)
     #c = c+1

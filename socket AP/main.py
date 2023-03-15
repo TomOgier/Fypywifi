@@ -24,13 +24,11 @@ print(wlan.ifconfig())
 #  ------------------------------------
 
 # Thread for handling a client
-def client_thread(c,address):
+def client_thread(socket1, c,address):
     # Receive maxium of 12 bytes from the client
     print(c)
     if (c == b'pspoll'):
-        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        s.sendto(b'ack',("192.168.4.4", 6543))
-        s.close()
+        socket1.sendto(b'ack',("192.168.4.4", 6543))
 
 
 
@@ -51,6 +49,6 @@ while True:
     print("attente")
     (c, address) = serversocket.recvfrom(1024)
     # Start a new thread to handle the client
-    _thread.start_new_thread(client_thread, (c,address))
+    _thread.start_new_thread(client_thread, (serversocket, c,address))
     #c = c+1
 
