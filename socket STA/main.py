@@ -60,6 +60,7 @@ while True:
     serversocket.setsockopt(usocket.SOL_SOCKET, usocket.SO_REUSEADDR, 1)
     serversocket.bind(("",6543))
     print("attente")
+    serversocket.getsockname()
     (c, address) = serversocket.recvfrom(1024)
     # Start a new thread to handle the client
     serversocket.close()
