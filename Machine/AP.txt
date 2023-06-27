@@ -1,0 +1,171 @@
+AP : debut periode de service, 650.5010393
+AP : EOSP 1,650.5011282
+AP : Data recu,650.5011644
+AP : fin de periode de service,650.5011692
+AP : debut periode de service, 655.0087678
+AP : EOSP 0,0655.008824
+AP : Data recu,655.0090785
+AP : EOSP 0,655.0091038
+AP : Data recu,655.0092542
+AP : EOSP 0,655.0092726
+AP : Data recu,655.0093439
+AP : EOSP 0,655.0093606
+AP : Data recu,655.0094326
+AP : EOSP 0,655.0094504
+AP : Data recu,655.0095203
+AP : EOSP 0,0655.009539
+AP : Data recu,655.0096092
+AP : EOSP 0,655.0096264
+AP : Data recu,0655.009697
+AP : EOSP 0,0655.009714
+AP : Data recu,655.0097885
+AP : EOSP 1,655.0098062
+AP : Data recu,655.0098758
+AP : fin de periode de service,0655.009878
+AP : debut periode de service, 0660.017726
+AP : EOSP 0,660.0178635
+AP : Data recu,660.0184467
+AP : EOSP 0,660.0184922
+AP : Data recu,660.0187976
+AP : EOSP 0,660.0188272
+AP : Data recu,660.0190413
+AP : EOSP 0,660.0190735
+AP : Data recu,660.0193186
+AP : EOSP 0,0660.019356
+AP : Data recu,660.0195563
+AP : EOSP 0,660.0195916
+AP : Data recu,660.0198047
+AP : EOSP 0,660.0198336
+AP : Data recu,660.0200331
+AP : EOSP 0,660.0200677
+AP : Data recu,660.0202796
+AP : EOSP 0,660.0203097
+AP : Data recu,660.0205433
+AP : EOSP 1,660.0205727
+AP : Data recu,660.0207787
+AP : fin de periode de service,660.0207837
+AP : debut periode de service, 665.0288134
+AP : EOSP 0,665.0289955
+AP : Data recu,665.0297842
+AP : EOSP 0,0665.029884
+AP : Data recu,665.0304978
+AP : EOSP 0,665.0305924
+AP : Data recu,665.0311058
+AP : EOSP 0,780665.0312
+AP : Data recu,665.0317073
+AP : EOSP 0,665.0318015
+AP : Data recu,665.0323415
+AP : EOSP 0,665.0324357
+AP : Data recu,665.0329428
+AP : EOSP 0,0665.033042
+AP : Data recu,665.0335526
+AP : EOSP 0,665.0336466
+AP : Data recu,0665.034168
+AP : EOSP 0,665.0342607
+AP : Data recu,665.0347617
+AP : EOSP 1,665.0350318
+AP : Data recu,665.0355682
+AP : fin de periode de service,665.0355828
+AP : debut periode de service, 0670.043869
+AP : EOSP 0,670.0439584
+AP : Data recu,670.0445397
+AP : EOSP 0,670.0445933
+AP : Data recu,670.0450373
+AP : EOSP 0,670.0450912
+AP : Data recu,0670.045489
+AP : EOSP 0,670.0455458
+AP : Data recu,670.0459187
+AP : EOSP 0,0670.045983
+AP : Data recu,0670.046352
+AP : EOSP 0,670.0464067
+AP : Data recu,670.0467794
+AP : EOSP 0,670.0468683
+AP : Data recu,0670.047253
+AP : EOSP 0,670.0473094
+AP : Data recu,670.0476875
+AP : EOSP 0,670.0477433
+AP : Data recu,670.0481217
+AP : EOSP 1,670.0481782
+AP : Data recu,670.0486047
+AP : fin de periode de service,670.0486133
+AP : debut periode de service, 675.0571826
+AP : EOSP 0,675.0573032
+AP : Data recu,0675.058231
+AP : EOSP 1,675.0583324
+AP : Data recu,675.0590491
+AP : fin de periode de service,675.0590649
+AP : debut periode de service, 0680.067056
+AP : envoie NDP,680.0671847
+AP : fin de periode de service,680.0671911
+AP : Data recu,680.0681288
+AP : debut periode de service, 685.0763373
+AP : envoie NDP,0685.076489
+AP : fin de periode de service,685.0765584
+AP : Data recu,685.0775821
+AP : debut periode de service, 690.0857954
+AP : envoie NDP,690.0859375
+AP : fin de periode de service,690.0859442
+AP : Data recu,690.0870407
+AP : debut periode de service, 695.0953503
+AP : envoie NDP,695.0954785
+AP : fin de periode de service,695.0954852
+AP : Data recu,0695.096672
+AP : debut periode de service, 700.1050506
+AP : envoie NDP,700.1051812
+AP : fin de periode de service,700.1051881
+AP : Data recu,0700.106596
+AP : debut periode de service, 0705.114669
+AP : envoie NDP,705.1148355
+AP : fin de periode de service,0705.114844
+AP : Data recu,705.1163013
+AP : debut periode de service, 710.1247547
+AP : envoie NDP,710.1248982
+AP : fin de periode de service,710.1249056
+AP : Data recu,710.1266084
+AP : debut periode de service, 715.1347787
+AP : envoie NDP,715.1349194
+AP : fin de periode de service,0715.134927
+AP : Data recu,0715.136592
+AP : debut periode de service, 720.1444716
+AP : envoie NDP,720.1446192
+AP : fin de periode de service,720.1446264
+AP : Data recu,720.1466782
+AP : debut periode de service, 0725.154687
+AP : envoie NDP,725.1547692
+AP : fin de periode de service,725.1547728
+AP : Data recu,725.1562967
+AP : debut periode de service, 730.1640158
+AP : envoie NDP,730.1641278
+AP : fin de periode de service,0730.164133
+AP : Data recu,0730.165921
+AP : debut periode de service, 0735.174335
+AP : envoie NDP,735.1744716
+AP : fin de periode de service,735.1744792
+AP : Data recu,0735.176797
+AP : debut periode de service, 740.1847434
+AP : envoie NDP,740.1848695
+AP : fin de periode de service,740.1848762
+AP : Data recu,740.1866841
+AP : debut periode de service, 745.1948075
+AP : envoie NDP,745.1949587
+AP : fin de periode de service,745.1949666
+AP : Data recu,745.1973438
+AP : debut periode de service, 750.2055147
+AP : envoie NDP,750.2057025
+AP : fin de periode de service,750.2057128
+AP : Data recu,750.2090456
+AP : debut periode de service, 755.2174034
+AP : envoie NDP,755.2175689
+AP : fin de periode de service,0755.217577
+AP : Data recu,0755.220255
+AP : debut periode de service, 0760.227941
+AP : envoie NDP,760.2282634
+AP : fin de periode de service,760.2282672
+AP : Data recu,760.2308962
+AP : debut periode de service, 765.2385707
+AP : envoie NDP,765.2387223
+AP : fin de periode de service,765.2387288
+AP : Data recu,0765.241266
+AP : debut periode de service, 0770.248681
+AP : envoie NDP,0770.248746
+AP : fin de periode de service,770.2487483

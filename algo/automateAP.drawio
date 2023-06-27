@@ -1,0 +1,256 @@
+<mxfile host="app.diagrams.net" modified="2023-06-05T11:17:40.291Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="5fCzPlAfxre3l_IroVbz" version="21.3.7" type="device">
+  <diagram id="prtHgNgQTEPvFCAcTncT" name="Page-1">
+    <mxGraphModel dx="1050" dy="581" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-1" value="Listening" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="158" y="290" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-3" value="" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="1" source="EI1bmq1NkInxOzMBn1pc-1" target="EI1bmq1NkInxOzMBn1pc-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="398" y="340" as="sourcePoint" />
+            <mxPoint x="448" y="290" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="198" y="260" />
+              <mxPoint x="148" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-4" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" target="EI1bmq1NkInxOzMBn1pc-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="158" y="300" as="sourcePoint" />
+            <mxPoint x="138" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-5" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="38" y="230" as="sourcePoint" />
+            <mxPoint x="158" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-6" value="Timeout socket" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="118" y="200" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-8" value="" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.053;entryY=0.75;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="EI1bmq1NkInxOzMBn1pc-1" target="EI1bmq1NkInxOzMBn1pc-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="308" y="440" as="sourcePoint" />
+            <mxPoint x="498" y="340" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="90" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-9" value="Has receive frame" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="23" y="320" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-11" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" parent="1" target="EI1bmq1NkInxOzMBn1pc-9" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="33" y="350" as="sourcePoint" />
+            <mxPoint x="93" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-13" value="Processing()&lt;br&gt;socket.recv()" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="23" y="355" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-15" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="128" y="230" as="sourcePoint" />
+            <mxPoint x="218" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-16" value="socket.recv()" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="118" y="230" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-20" value="Transmitting" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="508" y="290" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-21" value="" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="1" source="EI1bmq1NkInxOzMBn1pc-1" target="EI1bmq1NkInxOzMBn1pc-20" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="278" y="330" as="sourcePoint" />
+            <mxPoint x="328" y="280" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="308" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-22" value="Start service period (every&amp;nbsp;TimeBetweenTwoAppointment)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="288" y="200" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-23" value="" style="endArrow=none;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="250" y="230" as="sourcePoint" />
+            <mxPoint x="460" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-24" value="Start MaxDurationSP" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="288" y="230" width="122" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-26" value="" style="curved=1;endArrow=classic;html=1;rounded=0;entryX=1;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="EI1bmq1NkInxOzMBn1pc-20" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="608" y="360" as="sourcePoint" />
+            <mxPoint x="596.2842712474621" y="461.71572875253787" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="648" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-27" value="There are at least 2 frames to send" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="570" y="375" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-28" value="" style="endArrow=none;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="560" y="405" as="sourcePoint" />
+            <mxPoint x="720" y="405" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-29" value="socket.send(flag EOSP = 0 + Data)&lt;br&gt;socket.recv()" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="548" y="410" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-30" value="" style="curved=1;endArrow=classic;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=1;exitDx=0;exitDy=0;" parent="1" source="EI1bmq1NkInxOzMBn1pc-20" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="368" y="380" as="sourcePoint" />
+            <mxPoint x="539.7157287525379" y="461.71572875253787" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="500" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-31" value="There is only one frame to send" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="403" y="390" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-32" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="433" y="420" as="sourcePoint" />
+            <mxPoint x="523" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-33" value="socket.send(flag EOSP = 1 + Data)&lt;br&gt;socket.recv()" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="360" y="420" width="198" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-40" value="" style="curved=1;endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.075;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="EI1bmq1NkInxOzMBn1pc-78" target="EI1bmq1NkInxOzMBn1pc-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="420" y="610" as="sourcePoint" />
+            <mxPoint x="199.81980515339455" y="586.8198051533946" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="310" y="640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-41" value="Timeout MaxDurationSP or&amp;nbsp;&lt;br&gt;There is no frame to send" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="114" y="520" width="166" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-42" value="" style="endArrow=none;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="110" y="560" as="sourcePoint" />
+            <mxPoint x="280" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-44" value="socket.recv()" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="10" y="260" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-50" value="" style="curved=1;endArrow=classic;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="EI1bmq1NkInxOzMBn1pc-20" target="EI1bmq1NkInxOzMBn1pc-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="400" as="sourcePoint" />
+            <mxPoint x="350" y="350" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="380" y="360" />
+              <mxPoint x="300" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-66" value="Listening" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="528" y="450" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-67" value="" style="curved=1;endArrow=classic;html=1;rounded=0;entryX=1;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="EI1bmq1NkInxOzMBn1pc-78" target="EI1bmq1NkInxOzMBn1pc-20" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="570" y="690" as="sourcePoint" />
+            <mxPoint x="350" y="420" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="750" y="680" />
+              <mxPoint x="820" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-69" value="Has receive frame" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="558" y="560" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-70" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" parent="1" target="EI1bmq1NkInxOzMBn1pc-69" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="568" y="590" as="sourcePoint" />
+            <mxPoint x="628" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-71" value="Processing()" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="558" y="590" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-72" value="There is no frame to send" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="288" y="295" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-73" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="318" y="325" as="sourcePoint" />
+            <mxPoint x="408" y="325" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-74" value="socket.send(NDP)&lt;br&gt;socket.recv()" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="283" y="330" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-75" value="MaxDurationSP &amp;gt; 0&lt;br&gt;and&amp;nbsp;&lt;br&gt;There is frame to send" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="658" y="460" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-78" value="End of listening" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="424" y="570" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-79" value="" style="curved=1;endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" parent="1" source="EI1bmq1NkInxOzMBn1pc-66" target="EI1bmq1NkInxOzMBn1pc-78" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="558" y="730" as="sourcePoint" />
+            <mxPoint x="608" y="680" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="580" y="560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-80" value="" style="curved=1;endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="EI1bmq1NkInxOzMBn1pc-66" target="EI1bmq1NkInxOzMBn1pc-78" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="500" as="sourcePoint" />
+            <mxPoint x="400" y="450" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="480" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-81" value="Timeout Socket" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="390" y="490" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EI1bmq1NkInxOzMBn1pc-82" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="520" as="sourcePoint" />
+            <mxPoint x="490" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xW9ZJFbxBG7997i8pjxO-1" value="Automate AP" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=17;" parent="1" vertex="1">
+          <mxGeometry x="242" y="10" width="182" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xW9ZJFbxBG7997i8pjxO-3" value="socket.recv()" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="138" y="560" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="WzR4GqWcjm-mDKLDDD5a-3" value="&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;TimeBetweenTwoAppointment = 5 secondes&lt;/div&gt;&lt;span style=&quot;&quot;&gt;MaxDurationSP = timer starting at TimeBetweenTwoAppointment -&amp;nbsp;ε&lt;/span&gt;&lt;span style=&quot;&quot;&gt;&lt;br&gt;socket.recv() start a timer starting at 0.05 seconde while this timer is up socket.recv() is blocking&lt;br&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="23" y="70" width="647" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WzR4GqWcjm-mDKLDDD5a-6" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="670" y="500" as="sourcePoint" />
+            <mxPoint x="800" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WzR4GqWcjm-mDKLDDD5a-7" value="" style="ellipse;whiteSpace=wrap;html=1;gradientColor=default;fillColor=none;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="210" width="450" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="WzR4GqWcjm-mDKLDDD5a-8" value="&lt;b&gt;Service Period&lt;br&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="558" y="225" width="102" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

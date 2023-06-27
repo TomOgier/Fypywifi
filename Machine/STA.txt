@@ -1,0 +1,172 @@
+STA : debut periode de service, 0650.000155
+STA : Data envoye,650.5011318
+STA : Data recu, 650.5011792
+STA: fin de periode de service, 650.5011878
+STA : debut periode de service, 655.0000525
+STA : Data recu, 655.0089478
+STA : Data envoye,655.0090647
+STA : Data recu, 655.0091698
+STA : Data envoye,655.0092475
+STA : Data recu, 655.0092964
+STA : Data envoye,655.0093374
+STA : Data recu, 655.0093865
+STA : Data envoye,655.0094259
+STA : Data recu, 655.0094752
+STA : Data envoye,655.0095143
+STA : Data recu, 655.0095637
+STA : Data envoye,0655.009602
+STA : Data recu, 655.0096514
+STA : Data envoye,655.0096912
+STA : Data recu, 655.0097415
+STA : Data envoye,655.0097814
+STA : Data recu, 655.0098302
+STA : Data envoye,655.0098693
+STA: fin de periode de service, 0655.009872
+STA : debut periode de service, 0660.000042
+STA : Data recu, 0660.018064
+STA : Data envoye,660.0183368
+STA : Data recu, 660.0185757
+STA : Data envoye,660.0187187
+STA : Data recu, 660.0188956
+STA : Data envoye,660.0189707
+STA : Data recu, 0660.019184
+STA : Data envoye,660.0192468
+STA : Data recu, 0660.019427
+STA : Data envoye,660.0194905
+STA : Data recu, 660.0196676
+STA : Data envoye,660.0197318
+STA : Data recu, 660.0199032
+STA : Data envoye,660.0199673
+STA : Data recu, 0660.020136
+STA : Data envoye,660.0202067
+STA : Data recu, 660.0203853
+STA : Data envoye,660.0204716
+STA : Data recu, 660.0206432
+STA : Data envoye,660.0207083
+STA: fin de periode de service, 660.0207114
+STA : debut periode de service, 0665.000045
+STA : Data recu, 665.0291965
+STA : Data envoye,0665.029626
+STA : Data recu, 665.0300035
+STA : Data envoye,0665.030355
+STA : Data recu, 665.0307014
+STA : Data envoye,665.0309572
+STA : Data recu, 665.0313065
+STA : Data envoye,0665.031563
+STA : Data recu, 665.0319076
+STA : Data envoye,0665.032191
+STA : Data recu, 665.0325437
+STA : Data envoye,0665.032804
+STA : Data recu, 665.0331557
+STA : Data envoye,665.0334125
+STA : Data recu, 665.0337539
+STA : Data envoye,665.0340302
+STA : Data recu, 0665.034366
+STA : Data envoye,0665.034622
+STA : Data recu, 665.0351665
+STA : Data envoye,665.0354226
+STA: fin de periode de service, 0665.035433
+STA : debut periode de service, 670.0000448
+STA : Data recu, 670.0440652
+STA : Data envoye,670.0444164
+STA : Data recu, 0670.044677
+STA : Data envoye,670.0449157
+STA : Data recu, 670.0451684
+STA : Data envoye,0670.045357
+STA : Data recu, 670.0456173
+STA : Data envoye,670.0458267
+STA : Data recu, 670.0460706
+STA : Data envoye,670.0462806
+STA : Data recu, 670.0464525
+STA : Data envoye,0670.046673
+STA : Data recu, 0670.046948
+STA : Data envoye,670.0471754
+STA : Data recu, 670.0473845
+STA : Data envoye,670.0475926
+STA : Data recu, 670.0478175
+STA : Data envoye,670.0480292
+STA : Data recu, 670.0482535
+STA : Data envoye,0670.048475
+STA: fin de periode de service, 670.0484815
+STA : debut periode de service, 675.0000136
+STA : Data recu, 675.0574906
+STA : Data envoye,675.0580573
+STA : Data recu, 0675.058458
+STA : Data envoye,675.0588977
+STA: fin de periode de service, 675.0589085
+STA : debut periode de service, 680.0000648
+STA : NDP recu, 680.0673811
+STA : Data envoye,680.0680416
+STA: fin de periode de service, 680.0680552
+STA : debut periode de service, 0685.000049
+STA : NDP recu, 685.0766838
+STA : Data envoye,685.0774617
+STA: fin de periode de service, 0685.077479
+STA : debut periode de service, 690.0000417
+STA : NDP recu, 80690.08611
+STA : Data envoye,690.0869217
+STA: fin de periode de service, 690.0869324
+STA : debut periode de service, 80695.00004
+STA : NDP recu, 0695.095643
+STA : Data envoye,80695.09658
+STA: fin de periode de service, 695.0965958
+STA : debut periode de service, 700.0000067
+STA : NDP recu, 700.1053731
+STA : Data envoye,700.1064281
+STA: fin de periode de service, 0700.106445
+STA : debut periode de service, 705.0000544
+STA : NDP recu, 705.1149588
+STA : Data envoye,705.1161447
+STA: fin de periode de service, 705.1161652
+STA : debut periode de service, 710.0000517
+STA : NDP recu, 0710.125131
+STA : Data envoye,710.1263213
+STA: fin de periode de service, 710.1263387
+STA : debut periode de service, 715.0000045
+STA : NDP recu, 715.1350772
+STA : Data envoye,715.1363723
+STA: fin de periode de service, 715.1363914
+STA : debut periode de service, 720.0000482
+STA : NDP recu, 720.1448681
+STA : Data envoye,720.1463542
+STA: fin de periode de service, 0720.146373
+STA : debut periode de service, 725.0000045
+STA : NDP recu, 0725.154956
+STA : Data envoye,725.1561677
+STA: fin de periode de service, 725.1561787
+STA : debut periode de service, 730.0000496
+STA : NDP recu, 0730.164305
+STA : Data envoye,0730.165756
+STA: fin de periode de service, 730.1657703
+STA : debut periode de service, 80735.00006
+STA : NDP recu, 735.1747584
+STA : Data envoye,80735.17663
+STA: fin de periode de service, 735.1766634
+STA : debut periode de service, 740.0000377
+STA : NDP recu, 0740.184953
+STA : Data envoye,0740.186621
+STA: fin de periode de service, 740.1866496
+STA : debut periode de service, 745.0000808
+STA : NDP recu, 745.1951702
+STA : Data envoye,745.1971936
+STA: fin de periode de service, 0745.197218
+STA : debut periode de service, 750.0000415
+STA : NDP recu, 750.2058084
+STA : Data envoye,750.2088194
+STA: fin de periode de service, 750.2088423
+STA : debut periode de service, 755.0000055
+STA : NDP recu, 0755.217867
+STA : Data envoye,755.2201622
+STA: fin de periode de service, 755.2201848
+STA : debut periode de service, 0760.000005
+STA : NDP recu, 760.2286153
+STA : Data envoye,760.2307532
+STA: fin de periode de service, 0760.230775
+STA : debut periode de service, 765.0000062
+STA : NDP recu, 765.2389064
+STA : Data envoye,765.2411122
+STA: fin de periode de service, 765.2411292
+STA : debut periode de service, 770.0000045
+STA : NDP recu, 770.2489128
+STA : Data envoye,770.2510686
+STA: fin de periode de service, 770.2510836

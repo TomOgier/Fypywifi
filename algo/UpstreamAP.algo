@@ -1,0 +1,38 @@
+# "Fonction appelée lorsque une trame est recu par la machine et qu'elle doit etre traitée"
+
+fonction Traitement (socket1 : socket, trame : liste d'octets, adresseIPsource : string)
+début
+    entete <- trame[0] # "l'entete de la trame se trouve dans le premier octet" 
+    binaire(entete)
+    si entete[0:2] == 000 : binaire # "les trois premiers bits, à 000, de l'entete représentent une trame de data"
+        # "trame de data reçu"
+    fsi
+    si entete[0:2] == 100 : binaire # "les trois premiers bits, à 100, de l'entete représentent une requete d'horloge"
+        trame_envoyé <- octets("10100000") + octets(getHorloge())        # "les trois premiers bits, à 101, de l'entete représentent une reponse d'horloge"
+        socket1.send(adresseIPsource, trame_envoyé)
+    fsi
+fin
+
+
+Algorithme
+début
+    # "Configuration de base de L'Access Point"
+    adresseIP <- "192.168.4.1" 
+    configurationAP(ssid : "APfipy")
+    socket1 <- creationsocket(Protocol : udp, Port : 6537, timeout : 0.05 seconde)
+
+    tantque Vrai faire
+
+        # "écoute afin de savoir si une requete doit etre recu"
+        (trame_reçu, adresseIPsource) <- socket1.ecoute()      # "Fonction bloquante jusqu'a que le temps du timeout définit à la création de la socket soit terminé"
+        
+        si (trame_reçu, adresseIPsource) est définit
+            Traitement(socket1, trame_reçu, adresseIPsource)
+        fsi
+
+    ftantque
+    
+fin
+
+
+

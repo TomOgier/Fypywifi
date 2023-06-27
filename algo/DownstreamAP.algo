@@ -1,0 +1,106 @@
+# "Fonction appelée lorsque une trame est recu par la machine et qu'elle doit etre traitée"
+
+fonction Traitement (socket1 : socket, trame : liste d'octets, adresseIPsource : string)
+début
+    entete <- trame[0] # "l'entete de la trame se trouve dans le premier octet" 
+    binaire(entete)
+    
+    si entete[0:2] == 100 : binaire # "les trois premiers bits, à 100, de l'entete représentent une requete d'horloge"
+        trame_envoyé <- octets("10100000") + octets(getHorloge())        # "les trois premiers bits, à 101, de l'entete représentent une reponse d'horloge"
+        socket1.send(adresseIPsource, trame_envoyé)
+    fsi
+fin
+
+# "Fonction appelée lorsque la période de service de la Station commence"
+
+fonction Serviceperiod (socket1 : socket, donneeAEnvoye : liste_de_trame, adresseIPSTA : adresseIP)
+début
+    # "chronomètre permettant de ne pas depasser la temps maximal d'une serviceperiod"
+    chronometre.debut()
+    
+    # " variable permettant de svoir si a la fin de la période de service l'AP doit envoyer une trame NDP ou data avec EOSP"
+    NDPaEnvoye <- Vrai
+    EOSPaEnvoye <- Vrai
+
+    tantque (chronometre.lire() < 4.5 secondes) et (taille(donneeAEnvoye) != 0) faire
+        # "partie de code ou l'AP va envoyé la trame dont elle dispose pour la station "
+
+        # "s'il on rentre dans la boucle alors il y a des données à envoyer donc pas de NDP à envoyer à la fin de la période de service "
+        NDPaEnvoye <- Faux
+
+        # "Si il reste des données à envoyer il faut mettre le 5ieme bit de l'octet d'entete à 0 car ce bit représente le drapeau EOSP"
+        si taille(donneeAEnvoye) - 1 != 0
+             trame_envoyé <- octets("00000000") + octets(donneeAEnvoye.pop())
+             socket1.send(adresseIPSTA, trame_envoyé)
+        
+        # "Si il n'y a plus de données à envoyer il faut mettre le 5ieme bit de l'octet d'entete à 1"
+        sinon
+            trame_envoyé <- octets("00010000") + octets(donneeAEnvoye.pop())
+            socket1.send(adresseIPSTA, trame_envoyé)
+            EOSPaEnvoye <- Faux
+        fsi
+    ftantque
+    # "Si il n'y avait aucune trame de data à envoyer alors envoyer une trame NDP"
+    si NDPaEnvoye
+        trame_envoyé <- octets("01000000") + octets(donneeAEnvoye.pop()) # "Nul packet data envoyé car les trois premiers bits de l'entete sont 010"
+        socket1.send(adresseIPSTA, trame_envoyé)
+    # "Si la trame la dernière trame de data envoyé ne contenant pas le flag EOSP à 1 alors envoyé une trame avce le flag EOSP à 1"
+    sinon si EOSPaEnvoye
+            trame_envoyé <- octets("00010000") + octets(donneeAEnvoye.pop())
+            socket1.send(adresseIPSTA, trame_envoyé)
+        fsinonsi
+    fsi
+
+    # "fin de la période de service"
+fin
+
+
+Algorithme
+début
+    # "Configuration de base de L'Access Point"
+    adresseIP <- "192.168.4.1" 
+    configurationAP(ssid : "APfipy")
+    socket1 <- creationsocket(Protocol : udp, Port : 6537, timeout : 0.05 seconde)
+
+    # "intervalle de temps entre deux instant ou la Station doit se reveiller"
+    intrevalleTempsEveillé <- 5 seconde
+    
+    # "liste de trames à envoyer à l'AP"
+    donneeAEnvoye : liste
+
+
+    tampon : horloge
+    dateAChange : booleen
+
+
+    tantque Vrai faire
+
+        # "écoute afin de savoir si une requete doit etre recu"
+        (trame_reçu, adresseIPsource) <- socket1.ecoute()      # "Fonction bloquante jusqu'a que le temps du timeout définit à la création de la socket soit terminé"
+        si (trame_reçu, adresseIPsource) est définit
+            Traitement(socket1, trame_reçu, adresseIPsource)
+        fsi
+
+        # "l'instruction getHorloge-seconde()%intrevalleTempsEveillé permet de commencer la periode de service au bon moment"
+        si STAestAssocie()
+            # "les deux conditions 'si' suivante permettent de ne pas entrer de nouveaux dans une période de service "
+            # "dans le cas ou la première s'est terminé tres rapidement et l'instruction"
+            # "getHorloge-seconde()%intrevalleTempsEveillé est toujours vrai "
+            si tampon != getHorloge-seconde()%intrevalleTempsEveillé
+                dateAChange <- Vrai
+            fsi
+            si (tampon != getHorloge-seconde()%intrevalleTempsEveillé) et dateAChange 
+                tampon <- getHorloge-seconde()%intrevalleTempsEveillé
+                dateAChange <- Faux
+                
+                # "debut de la periode de service"
+                Serviceperiod(socket1, donneeAEnvoye, adresseIPSTA)
+            fsi
+        fsi
+
+    ftantque
+    
+fin
+
+
+

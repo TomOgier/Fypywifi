@@ -1,0 +1,104 @@
+# "Fonction appelée lorsque une trame est recu par la machine et qu'elle doit etre traitée"
+
+fonction Traitement (socket1 : socket, trame : liste d'octets, adresseIPsource : string)
+début
+    entete <- trame[0] # "l'entete de la trame se trouve dans le premier octet" 
+    donneUtile <- trame[1:]  # "le reste de la trame est donc de la donnée utile"
+    binaire(entete)
+
+    si entete[0:2] == 101 : binaire # "les trois premiers bits, à 101, de l'entete représentent une réponse d'horloge"
+        setHorloge(donneUtile)
+    fsi
+
+    si entete[0:2] == 000 : binaire # "les trois premiers bits, à 000, de l'entete représentent une trame de data"
+        si entete[3] == 1
+            retourner Vrai  # "retourne Vrai pour spécifier que la periode de service touche a sa fin"
+    fsi
+
+    si entete[0:2] == 010 : binaire  # "les trois premiers bits, à 010, de l'entete représentent une trame NDP"
+        retourner Vrai  # "retourne Vrai pour spécifier que la periode de service touche a sa fin"
+    fsi
+
+
+    retourner Faux  
+fin
+
+# "Fonction appelée lorsque la période de service de la Station commence"
+
+fonction Serviceperiod(socket1 : socket, donneeAEnvoye : liste) 
+début
+    # "chronomètre permettant de ne pas depasser la temps maximal d'une serviceperiod"
+    FinServicePeriod <- chronometre.debut()
+
+    # "chronomètre permettant de savoir quand est-ce que la station doit s'endormir lorsqu'elle n'a pas recu de trame depuis un certain temps"
+    FinMinWakeDuration <- chronometre.debut()
+
+    # "variable permettant de savoir si la période de service s'arrete en fonction de la récéption d'un NDP ou d'un flag EOSP"
+    NDPorEOSPrecu <- Faux
+
+    # "pour entrer dans la boucle il faut ne pas avoir dépasser le temps maximal, ne pas avoir recu de NDP ni d'EOSP et il ne faut pas ne pas avoir recu de trame pendant un certain temps"
+    tantque (FinServicePeriod.lire() < 4.5 secondes) et (!NDPorEOSPrecu) et (FinMinWakeDuration.lire() < 1 seconde) faire
+        
+        # "écoute afin de savoir si une requete doit etre recu"
+        (trame_reçu, adresseIPsource) <- socket1.ecoute()      # "Fonction bloquante jusqu'a que le temps du timeout définit à la création de la socket soit terminé"
+        si (trame_reçu, adresseIPsource) est definit
+            NDPorEOSPrecu <- Traitement(socket1, trame_reçu, adresseIPsource)
+
+            # "si trame recu alors chronomètre recommence"
+            FinMinWakeDuration <- chronometre.debut()
+        fsi
+
+        # "envoye de trame s'il y a des trames à envoyé"
+        si taille(donneeAEnvoye) != 0 
+            trame_envoyé <- octets("00000000") + octets(donneeAEnvoye.pop()) 
+            socket.send(adresseIPAP, trame_envoyé)
+        fsi
+    ftantque
+    # "fin de la période de service"
+fin
+
+Algorithme
+début
+    # "Configuration de base de la station avec l'association avec L'AP"
+    adresseIP <- "192.168.4.4" 
+    adresseIPAP <- associationAP(ssid : "APfipy")
+    socket1 <- creationsocket(Protocol : udp, Port : 6537, timeout : 0.05 seconde)
+
+    # "réglage de l'horloge en réalisant une requète d'horloge"
+    trame_envoyé <- octets("10000000")   # "100 représente le code pour une requète d'horloge"
+    socket1.envoye(adresseIPAP, trame_envoyé)       # "envoye de la requete d'horloge"
+    (trame_reçu, adresseIPsource) <- socket1.ecoute()      # "Fonction bloquante jusqu'a que le temps du timeout définit à la création de la socket soit terminé"
+    Traitement(socket1, trame_reçu, adresseIPsource)
+
+    # "intervalle de temps entre deux instant ou la Station doit se reveiller"
+    intrevalleTempsEveillé <- 5 seconde
+
+    # "liste de trames à envoyer à l'AP"
+    donneeAEnvoye : liste
+
+
+    tampon : horloge
+    dateAChange : booleen
+
+    # "l'instruction getHorloge-seconde()%intrevalleTempsEveillé permet de commencer la periode de service au bon moment"
+    tantque Vrai faire
+        # "les deux conditions 'si' suivante permettent de ne pas entrer de nouveaux dans une période de service "
+        # "dans le cas ou la première s'est terminé tres rapidement et l'instruction"
+        # "getHorloge-seconde()%intrevalleTempsEveillé est toujours vrai "
+        si tampon != getHorloge-seconde() % intrevalleTempsEveillé  #"fonction permettant de ne pas retourner dans la boucle dans la cas ou l'on serait dans la meme seconde au début et a la fin de la boucle"
+            dateAChange <- Vrai
+        fsi
+        si getHorloge-seconde() % intrevalleTempsEveillé == 0 et dateAChange
+            dateAChange <- Faux
+            tampon <- getHorloge-seconde() % intrevalleTempsEveillé
+            
+            # "début de la periode de service"
+            Serviceperiod(socket1,donneeAEnvoye)
+            
+        fsi
+    ftantque
+
+fin
+
+
+
