@@ -1,171 +1,132 @@
-AP : debut periode de service, 650.5010393
-AP : EOSP 1,650.5011282
-AP : Data recu,650.5011644
-AP : fin de periode de service,650.5011692
-AP : debut periode de service, 655.0087678
-AP : EOSP 0,0655.008824
-AP : Data recu,655.0090785
-AP : EOSP 0,655.0091038
-AP : Data recu,655.0092542
-AP : EOSP 0,655.0092726
-AP : Data recu,655.0093439
-AP : EOSP 0,655.0093606
-AP : Data recu,655.0094326
-AP : EOSP 0,655.0094504
-AP : Data recu,655.0095203
-AP : EOSP 0,0655.009539
-AP : Data recu,655.0096092
-AP : EOSP 0,655.0096264
-AP : Data recu,0655.009697
-AP : EOSP 0,0655.009714
-AP : Data recu,655.0097885
-AP : EOSP 1,655.0098062
-AP : Data recu,655.0098758
-AP : fin de periode de service,0655.009878
-AP : debut periode de service, 0660.017726
-AP : EOSP 0,660.0178635
-AP : Data recu,660.0184467
-AP : EOSP 0,660.0184922
-AP : Data recu,660.0187976
-AP : EOSP 0,660.0188272
-AP : Data recu,660.0190413
-AP : EOSP 0,660.0190735
-AP : Data recu,660.0193186
-AP : EOSP 0,0660.019356
-AP : Data recu,660.0195563
-AP : EOSP 0,660.0195916
-AP : Data recu,660.0198047
-AP : EOSP 0,660.0198336
-AP : Data recu,660.0200331
-AP : EOSP 0,660.0200677
-AP : Data recu,660.0202796
-AP : EOSP 0,660.0203097
-AP : Data recu,660.0205433
-AP : EOSP 1,660.0205727
-AP : Data recu,660.0207787
-AP : fin de periode de service,660.0207837
-AP : debut periode de service, 665.0288134
-AP : EOSP 0,665.0289955
-AP : Data recu,665.0297842
-AP : EOSP 0,0665.029884
-AP : Data recu,665.0304978
-AP : EOSP 0,665.0305924
-AP : Data recu,665.0311058
-AP : EOSP 0,780665.0312
-AP : Data recu,665.0317073
-AP : EOSP 0,665.0318015
-AP : Data recu,665.0323415
-AP : EOSP 0,665.0324357
-AP : Data recu,665.0329428
-AP : EOSP 0,0665.033042
-AP : Data recu,665.0335526
-AP : EOSP 0,665.0336466
-AP : Data recu,0665.034168
-AP : EOSP 0,665.0342607
-AP : Data recu,665.0347617
-AP : EOSP 1,665.0350318
-AP : Data recu,665.0355682
-AP : fin de periode de service,665.0355828
-AP : debut periode de service, 0670.043869
-AP : EOSP 0,670.0439584
-AP : Data recu,670.0445397
-AP : EOSP 0,670.0445933
-AP : Data recu,670.0450373
-AP : EOSP 0,670.0450912
-AP : Data recu,0670.045489
-AP : EOSP 0,670.0455458
-AP : Data recu,670.0459187
-AP : EOSP 0,0670.045983
-AP : Data recu,0670.046352
-AP : EOSP 0,670.0464067
-AP : Data recu,670.0467794
-AP : EOSP 0,670.0468683
-AP : Data recu,0670.047253
-AP : EOSP 0,670.0473094
-AP : Data recu,670.0476875
-AP : EOSP 0,670.0477433
-AP : Data recu,670.0481217
-AP : EOSP 1,670.0481782
-AP : Data recu,670.0486047
-AP : fin de periode de service,670.0486133
-AP : debut periode de service, 675.0571826
-AP : EOSP 0,675.0573032
-AP : Data recu,0675.058231
-AP : EOSP 1,675.0583324
-AP : Data recu,675.0590491
-AP : fin de periode de service,675.0590649
-AP : debut periode de service, 0680.067056
-AP : envoie NDP,680.0671847
-AP : fin de periode de service,680.0671911
-AP : Data recu,680.0681288
-AP : debut periode de service, 685.0763373
-AP : envoie NDP,0685.076489
-AP : fin de periode de service,685.0765584
-AP : Data recu,685.0775821
-AP : debut periode de service, 690.0857954
-AP : envoie NDP,690.0859375
-AP : fin de periode de service,690.0859442
-AP : Data recu,690.0870407
-AP : debut periode de service, 695.0953503
-AP : envoie NDP,695.0954785
-AP : fin de periode de service,695.0954852
-AP : Data recu,0695.096672
-AP : debut periode de service, 700.1050506
-AP : envoie NDP,700.1051812
-AP : fin de periode de service,700.1051881
-AP : Data recu,0700.106596
-AP : debut periode de service, 0705.114669
-AP : envoie NDP,705.1148355
-AP : fin de periode de service,0705.114844
-AP : Data recu,705.1163013
-AP : debut periode de service, 710.1247547
-AP : envoie NDP,710.1248982
-AP : fin de periode de service,710.1249056
-AP : Data recu,710.1266084
-AP : debut periode de service, 715.1347787
-AP : envoie NDP,715.1349194
-AP : fin de periode de service,0715.134927
-AP : Data recu,0715.136592
-AP : debut periode de service, 720.1444716
-AP : envoie NDP,720.1446192
-AP : fin de periode de service,720.1446264
-AP : Data recu,720.1466782
-AP : debut periode de service, 0725.154687
-AP : envoie NDP,725.1547692
-AP : fin de periode de service,725.1547728
-AP : Data recu,725.1562967
-AP : debut periode de service, 730.1640158
-AP : envoie NDP,730.1641278
-AP : fin de periode de service,0730.164133
-AP : Data recu,0730.165921
-AP : debut periode de service, 0735.174335
-AP : envoie NDP,735.1744716
-AP : fin de periode de service,735.1744792
-AP : Data recu,0735.176797
-AP : debut periode de service, 740.1847434
-AP : envoie NDP,740.1848695
-AP : fin de periode de service,740.1848762
-AP : Data recu,740.1866841
-AP : debut periode de service, 745.1948075
-AP : envoie NDP,745.1949587
-AP : fin de periode de service,745.1949666
-AP : Data recu,745.1973438
-AP : debut periode de service, 750.2055147
-AP : envoie NDP,750.2057025
-AP : fin de periode de service,750.2057128
-AP : Data recu,750.2090456
-AP : debut periode de service, 755.2174034
-AP : envoie NDP,755.2175689
-AP : fin de periode de service,0755.217577
-AP : Data recu,0755.220255
-AP : debut periode de service, 0760.227941
-AP : envoie NDP,760.2282634
-AP : fin de periode de service,760.2282672
-AP : Data recu,760.2308962
-AP : debut periode de service, 765.2385707
-AP : envoie NDP,765.2387223
-AP : fin de periode de service,765.2387288
-AP : Data recu,0765.241266
-AP : debut periode de service, 0770.248681
-AP : envoie NDP,0770.248746
-AP : fin de periode de service,770.2487483
+AP : debut periode de service, 970.5164683
+AP : EOSP 1,970.5165489
+AP : Data recu,970.5165887
+AP : fin de periode de service,970.5165913
+AP : debut periode de service, 975.0698688
+AP : EOSP 0,975.0699492
+AP : Data recu,975.0908065
+AP : EOSP 0,6975.090888
+AP : Data recu,975.1065192
+AP : EOSP 0,975.1116974
+AP : Data recu,975.1223223
+AP : EOSP 0,975.1223602
+AP : Data recu,6975.138065
+AP : EOSP 0,975.1381297
+AP : Data recu,975.1488059
+AP : EOSP 0,975.1488426
+AP : Data recu,975.1698616
+AP : EOSP 0,975.1752496
+AP : Data recu,975.1909568
+AP : EOSP 0,975.1909952
+AP : Data recu,6975.212063
+AP : EOSP 1,975.2121003
+AP : Data recu,975.2333097
+AP : fin de periode de service,6975.233315
+AP : debut periode de service, 980.2922313
+AP : EOSP 0,980.2975392
+AP : Data recu,980.3131657
+AP : EOSP 0,980.3184283
+AP : Data recu,6980.334352
+AP : EOSP 0,980.3343892
+AP : Data recu,980.3553925
+AP : EOSP 0,980.3554752
+AP : Data recu,980.3659604
+AP : EOSP 0,980.3659766
+AP : Data recu,6980.381636
+AP : EOSP 0,980.3817024
+AP : Data recu,980.4027312
+AP : EOSP 0,980.4027727
+AP : Data recu,980.4080014
+AP : EOSP 0,980.4080324
+AP : Data recu,6980.418685
+AP : EOSP 0,980.4238386
+AP : Data recu,6980.434585
+AP : EOSP 1,980.4346232
+AP : Data recu,980.4554863
+AP : fin de periode de service,980.4554915
+AP : debut periode de service, 985.0113666
+AP : EOSP 0,985.0114539
+AP : Data recu,56985.02741
+AP : EOSP 0,985.0274634
+AP : Data recu,6985.043424
+AP : EOSP 0,985.0434656
+AP : Data recu,985.0646482
+AP : EOSP 0,6985.064689
+AP : Data recu,6985.080717
+AP : EOSP 0,985.0807564
+AP : Data recu,985.0967503
+AP : EOSP 0,985.0967877
+AP : Data recu,6985.112787
+AP : EOSP 0,6985.118041
+AP : Data recu,985.1287477
+AP : EOSP 0,985.1339958
+AP : Data recu,985.1447496
+AP : EOSP 0,6985.150006
+AP : Data recu,985.1607847
+AP : EOSP 1,985.1660962
+AP : Data recu,985.1820152
+AP : fin de periode de service,985.1820207
+AP : debut periode de service, 990.2408242
+AP : EOSP 0,6990.240947
+AP : Data recu,990.2568169
+AP : EOSP 0,990.2568796
+AP : Data recu,6990.278058
+AP : EOSP 0,990.2781165
+AP : Data recu,990.2940342
+AP : EOSP 0,990.2992756
+AP : Data recu,990.3152697
+AP : EOSP 0,6990.315322
+AP : Data recu,990.3311749
+AP : EOSP 0,990.3364167
+AP : Data recu,990.3472779
+AP : EOSP 0,990.3525062
+AP : Data recu,990.3684697
+AP : EOSP 0,6990.373746
+AP : Data recu,6990.389787
+AP : EOSP 0,990.3898351
+AP : Data recu,56990.40573
+AP : EOSP 1,990.4110005
+AP : Data recu,990.4267914
+AP : fin de periode de service,990.4267972
+AP : debut periode de service, 995.4852045
+AP : EOSP 0,995.4904778
+AP : Data recu,6995.510421
+AP : EOSP 0,995.5156362
+AP : Data recu,995.5272584
+AP : EOSP 0,995.5273073
+AP : Data recu,995.5377893
+AP : EOSP 0,995.5378258
+AP : Data recu,995.5481987
+AP : EOSP 0,995.5534146
+AP : Data recu,995.5593767
+AP : EOSP 0,995.5645962
+AP : Data recu,995.5701346
+AP : EOSP 0,995.5752785
+AP : Data recu,995.5753171
+AP : EOSP 0,6995.580738
+AP : Data recu,995.5860753
+AP : EOSP 0,6995.591337
+AP : Data recu,995.6021118
+AP : EOSP 0,995.6072264
+AP : Data recu,995.6127787
+AP : EOSP 1,995.6181192
+AP : Data recu,6995.628433
+AP : fin de periode de service,995.6284385
+AP : debut periode de service, 000.1762877
+AP : EOSP 0,7000.176438
+AP : Data recu,000.1769457
+AP : EOSP 0,000.1770499
+AP : Data recu,000.1774457
+AP : EOSP 0,7000.177549
+AP : Data recu,000.1779046
+AP : EOSP 0,000.1780088
+AP : Data recu,000.1784217
+AP : EOSP 0,000.1785388
+AP : Data recu,000.1789188
+AP : EOSP 0,7000.179023
+AP : Data recu,000.1794186
+AP : EOSP 0,000.1795223
+AP : Data recu,000.1799169
+AP : EOSP 1,000.1800222
+AP : Data recu,7000.180468
+AP : fin de periode de service,7000.180483
